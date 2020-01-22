@@ -145,7 +145,7 @@ http://www.deitel.com/books/downloads.html
 <ul>
 <li>When a URL is entered into a web browser, the browser usses HTTP tyo request the page from the server</li>
 <li>request is 
-  ````GET /books/downloads.html HTTP/1.1````
+  'GET /books/downloads.html HTTP/1.1'
   </li>
 <ul>
 
