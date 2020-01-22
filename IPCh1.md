@@ -144,10 +144,97 @@ http://www.deitel.com/books/downloads.html
 <b> Making a request and receiving a response</b>
 <ul>
 <li>When a URL is entered into a web browser, the browser usses HTTP tyo request the page from the server</li>
-<li>request is 
-  'GET /books/downloads.html HTTP/1.1'
-  </li>
-<ul>
+<li>request is </li>
+</ul>
+
+
+ >```GET /books/downloads.html HTTP/1.1```         
+
+* **GET** is an **HTTP method** indicating that the client wihsies to obtain a resource from the server
+* the rest of the command conatins the path name of the resource, and the protocols name and versiopn number (HTTP/1.1)
+* any server thast undersatdns HTTP will be able to translate the request anbd respind appropiatly.
+* server first sends a line of text that indicates the http version followed by a numeric code and a phrase that describes the status of the transaction,
+	* ```HTTP/1.1 200 OK```
+		* means success
+	* ```HTTP/1.1 404 Not Found ```
+		* informas the client the resource could not be located
+
+### HTTP Headers
+* Next, the server sends one of more **HTTP Headers**, which provide additional information abut the data that will be sent.
+* in this case, the server is sending an HTML text document, so one HTTP header for this example would read
+	* ``` Content-type: text/html ```
+* this information specifies the **Multipurpose Internet Mail Extensions (MIME) type** of the content that the server is transmitting to the browser
+* **MIME** standard sepcpfies formats, which programs can use to interpret data.
+	* example: MIME type *text/plain* indicates the information is text
+	* example: MIME type *image/jpeg* indicates an image is being sent.
+* header or set of headers is followed by a blank line, which indicates the headers are done being sent.
+
+
+### HTTP POST & GET
+* two most common **HTTP request types**
+	* AKA **request methods**
+* **get** - retreieves informatiopn from a server
+* **post** - sends data to a server
+* **server-side handling** - prossess the data that posts to a server
+* **Example** - ```www.google.com/search?q=deitel```
+	* *q* is the name of a vairable in Googles search formats
+	* *deitel* is search term
+	* *?* is used to seperate the **query string** from the rest of the URL in a request.
+	* *name/value* pair is passed to the server with the name and value sepereated by an equal sign(=)
+	* if more than 1 *name/value* pair is submitted, each pair is seperated by an ampersand(&)
+	* server uses data passed in a **query string** toi retrieve appropiate resource from the server
+* **get** request can be initiated by:
+	* submitting an HTML form whose **method** attribute is set to ''get''
+	* typing the URL firexctly into the address bar
+* **POST** request sends form data as part of the HTTP mesage 
+	* get typically limits the **search query**, so its sometimes neccasary to obtain l;arge amounts of information throuigh the **post** method.
+	* **post** sometimes preffered because it hides the submitted data from the user by embedding it in an HTTP message. 
+	
+	
+	
+### Client Side Caching
+* Browsers often **cache**, or save webpages for quick reloading
+* an hTTP response can iindicate the lengfth of the time for whicvh the content retains *fresh*
+
+## Multi-tier Application Architecture
+
+* **multi-tier application** - divide functionality into seperate **teirs**
+* sometimes called **n-teir applications**
+* teirs of web based applications often reside on seperate computers 
+* **bottom tier** - maintains the applications data
+	* aka - data teir / information teir
+	* typically stores data in a relational database
+* **middle teir** - implements buisness logic, controller logic, and presentaqtion logic to control interactions between the applications clients and its data.
+	* the middle tier acts as an intermediarry between information tiers and applications clients.
+	* **controller lofic**
+		* proccesses client requests
+		* retrieves dasta from the database
+	* **business logic** in the middle tier enforces **buisness rules** and ensures data is reliable before the applicaztion nupdates a database 
+	* example if busniess rule - busniess rule in the middle tier of a retail stoers web based application might ensure that all product quantities remain postivie.
+* **top tier** - applications user interface
+	* aka client tier
+
+## Client-Side Scripting versus Server-Side Scripting
+* **client-side** javascript can be used to
+	* validate user input
+	* interact wuth browser
+	* enhance web pages
+	* add cliennt/server communication betweeb a browser and web server
+* **browser dependancy** - 	browser or **scripting host** must support the scripting languiage and capabilities
+* **server side scripts** - programmers have more felxibility. 
+	* server-side scritping languages have a wider range of p[rogramattic capabilities
+	
+	
+## 
+		
+
+
+
+
+
+ 
+
+
 
 
 
