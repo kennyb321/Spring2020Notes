@@ -1,4 +1,4 @@
-<div>
+
 # Chapter 1: Creation Managment of Innovation and Technology
 ## Overview
 How do firms create and manage innovation and technology?
@@ -139,7 +139,7 @@ The manager is an architect/ engineer, politicion/network builder, and artists/s
  
 
 
-</div>
+
 	
 
 	
